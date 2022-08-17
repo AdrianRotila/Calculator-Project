@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+.calculator * {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  height: 70px;
+  width: 70px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  min-height: 85vh;
+  width: 350px;
+  border-radius: 50px;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(7, 80px);
+  background-color: black;
+}
+.calculator__output {
+  grid-column: 1/-1;
+  grid-row: span 2;
+  border-radius: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+.calculator__output--current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4.5rem;
+  font-weight: lighter;
+}
+.calculator #zero {
+  grid-column: span 2;
+  border-radius: 40px;
+  height: 70px;
+  width: 150px;
+  text-align: center;
+}
+.calculator__AC, .calculator__negative, .calculator__percentage {
+  background-color: lightgray;
+  color: black;
+}
+.calculator__operation {
+  background-color: darkorange;
+}
+.calculator__number {
+  background-color: rgba(221, 217, 217, 0.182);
+}
