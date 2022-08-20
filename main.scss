@@ -47,7 +47,7 @@ body {
 	    align-items: flex-end;
         flex-direction: column;
         justify-content: right;
-        padding: 15px;
+        padding: 10px;
         min-width: 100%;
         height: 100%;
         overflow: hidden;
@@ -92,11 +92,11 @@ body {
         
     }
 
-    &__operation, &__equals {
+    &__operation {
         background-color: darkorange;
     }
 
-    &__number {
+    &__number, &__dot, &__equal {
       background-color:  rgba(242, 235, 235, 0.182);
     }
 } 
