@@ -67,8 +67,8 @@ operationButtons.forEach((button) => {
         } else if(previousTextElement.innerHTML.includes("+")) {
             previousNumber = previousTextElement.innerHTML.replace("+", "");
             result = Number(previousNumber) + Number(currentNumber);
-        } else if (previousTextElement.innerHTML.includes("−")) {
-            previousNumber = previousTextElement.innerHTML.replace("−", "");
+        } else if (previousTextElement.innerHTML.includes("-")) {
+            previousNumber = previousTextElement.innerHTML.replace("-", "");
             result = previousNumber - currentNumber;
         } else if (previousTextElement.innerHTML.includes("=")) {
             previousNumber = previousTextElement.innerHTML.replace("=", "");
@@ -96,4 +96,18 @@ operationButtons.forEach((button) => {
             }
         }
     })
+})
+
+// Percentage Button
+percentageButton.addEventListener("click", () =>{
+    currentTextElement.innerHTML = currentTextElement.innerHTML / 100;
+})
+
+//Sign Button
+signButton.addEventListener("click", () => {
+    if(currentTextElement.innerHTML.includes("-") && currentTextElement.innerHTML !== "0") {
+        currentTextElement.innerHTML = currentTextElement.innerHTML.replace("-", "");
+    } else if(currentTextElement.innerHTML !== "0"){
+        currentTextElement.innerHTML = `-${currentTextElement.innerHTML}`;
+    }
 })
