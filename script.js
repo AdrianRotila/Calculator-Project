@@ -73,7 +73,6 @@ operationButtons.forEach((button) => {
             previousNumber = previousTextElement.innerHTML.replace("=", "");
             previousTextElement.innerHTML = 0;
         }
-        
 
         // When = is pressed do nothing
         if(operator == "=" && previousTextElement.innerHTML == 0){
