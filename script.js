@@ -18,15 +18,14 @@ numberButtons.forEach((button) => {
         if(currentTextElement.innerHTML == "0" || currentTextElement.innerHTML == result) {
             currentTextElement.innerHTML = "" + button.innerHTML;
 
-        // Maximum number's length is set to 12
-        } else if(currentTextElement.innerHTML.length < 18) {
+        // Maximum number's length is set to 17
+        } else if(currentTextElement.innerHTML.length < 17) {
             currentTextElement.append(button.innerText);
         } 
-
         // Change font size when the number's lenght is more than 8
-        if(currentTextElement.innerHTML.length > 12) {
+        if(currentTextElement.innerHTML.length > 11) {
             currentTextElement.style.fontSize = "2rem";
-        } else if(currentTextElement.innerHTML.length > 8) {
+        } else if(currentTextElement.innerHTML.length > 7) {
             currentTextElement.style.fontSize = "3rem";
         }
     })
@@ -55,7 +54,7 @@ operationButtons.forEach((button) => {
         const operator = button.innerHTML;
         let currentNumber = currentTextElement.innerHTML;
         let previousNumber = previousTextElement.innerHTML;
-        let twoDecimals = 0;
+        let twoDecimals;
         
         // Calculations
         if(previousTextElement.innerHTML.includes("÷")) {
@@ -103,7 +102,7 @@ percentageButton.addEventListener("click", () =>{
     currentTextElement.innerHTML = currentTextElement.innerHTML / 100;
 })
 
-//Sign Button
+//Sign Button`
 signButton.addEventListener("click", () => {
     if(currentTextElement.innerHTML.includes("-") && currentTextElement.innerHTML !== "0") {
         currentTextElement.innerHTML = currentTextElement.innerHTML.replace("-", "");

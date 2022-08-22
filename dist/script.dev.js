@@ -15,15 +15,15 @@ numberButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     // Appeding the numbers if the value is !== 0
     if (currentTextElement.innerHTML == "0" || currentTextElement.innerHTML == result) {
-      currentTextElement.innerHTML = "" + button.innerHTML; // Maximum number's length is set to 12
-    } else if (currentTextElement.innerHTML.length < 18) {
+      currentTextElement.innerHTML = "" + button.innerHTML; // Maximum number's length is set to 17
+    } else if (currentTextElement.innerHTML.length < 17) {
       currentTextElement.append(button.innerText);
     } // Change font size when the number's lenght is more than 8
 
 
-    if (currentTextElement.innerHTML.length > 12) {
+    if (currentTextElement.innerHTML.length > 11) {
       currentTextElement.style.fontSize = "2rem";
-    } else if (currentTextElement.innerHTML.length > 8) {
+    } else if (currentTextElement.innerHTML.length > 7) {
       currentTextElement.style.fontSize = "3rem";
     }
   });
@@ -48,7 +48,7 @@ operationButtons.forEach(function (button) {
     var operator = button.innerHTML;
     var currentNumber = currentTextElement.innerHTML;
     var previousNumber = previousTextElement.innerHTML;
-    var twoDecimals = 0; // Calculations
+    var twoDecimals; // Calculations
 
     if (previousTextElement.innerHTML.includes("÷")) {
       previousNumber = previousTextElement.innerHTML.replace("÷", "");
@@ -91,7 +91,7 @@ operationButtons.forEach(function (button) {
 
 percentageButton.addEventListener("click", function () {
   currentTextElement.innerHTML = currentTextElement.innerHTML / 100;
-}); //Sign Button
+}); //Sign Button`
 
 signButton.addEventListener("click", function () {
   if (currentTextElement.innerHTML.includes("-") && currentTextElement.innerHTML !== "0") {
